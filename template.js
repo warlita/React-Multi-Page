@@ -1,7 +1,17 @@
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">Navbar</a>
+    <nav className="navbar navbar-expand navbar-light bg-light">
+      <a className="navbar-brand" href="index.html">Navbar</a>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <a className="nav-link" href="index.html">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="press.html">Press</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
@@ -19,7 +29,7 @@ const Sidebar = () => {
 const Footer = () => {
   return (
     <div className="border-top p-2">
-      Template Demo © 2019
+      Template Demo © 2019<span class="d-none">don't be lazy</span>
     </div>
   )
 }
@@ -40,15 +50,3 @@ const Template = (props) => {
     </React.Fragment>
   )
 }
-
-const App = () => {
-  return (
-    <Template>
-      <h1>Main content</h1>
-    </Template>
-  );
-}
-
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-root.render(<App />);
